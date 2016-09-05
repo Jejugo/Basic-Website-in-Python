@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Website Development</title>
+	<meta charset="utf-8" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+	{% load staticfiles %}
+	<link rel="stylesheet" href="{% static 'personal/css/bootstrap.min.css' %}" type = "text/css"/>
+  <link rel="stylesheet" href="{% static 'personal/css/mycss.css' %}" type = "text/css"/>
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+	<meta name="viewport" content = "width=device-width, initial-scale=1.0">
+
+	<style type="text/css">
+		html,
+		body {
+		  height:100%
+		}
+
+        #title{
+            font-family: 'Raleway', sans-serif;
+        }
+
+
+
+	</style>
+</head>
+
+
+
+<body class="body" style="background-color:#f6f6f6">
+  <nav class="navbar navbar-inverse"  class="change">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+
+
+    <!-- CODE BLOCK THAT CREATES A BUTTON WHEN COLLAPSED-->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mainNavBar" >
+      
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    <!-- CODE BLOCK THAT CREATES A BUTTON WHEN COLLAPSED-->
+      
+    <a class="navbar-brand" href="#" id="logoColor">SunnyWorkz</a></div>
+    
+    <!-- Collect the nav links, forms, and other content for toggling -->
+
+    <div class="collapse navbar-collapse" id="mainNavBar">
+      <ul class="nav navbar-nav">
+        <li><a href="/" class="active">Home</a></li>
+        <li><a href="/blog/" >Blog</a></li>
+        <li><a href="/contact/" >Contact</a></li>
+
+        <li class="dropdown" aria-labelledby="dLabel">
+          <a href="#"class="dropdown-toggle" id="dLabel" id="drop4" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">More <span class="caret"></span>
+          </a>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+
+
+          <ul class="dropdown-menu" aria-labelledby="dLabel">
+            <li><a href="/action">How did we begin</a></li>
+            <li><a href="#">What are our advantages</a></li>
+            <li><a href="#">What do we offer</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">One more separated link</a></li>
+          </ul>
+        </li>
+
+      </ul>
+      <form class="navbar-form navbar-left">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>
+
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/login">Sign In</a></li>
+
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+
+</nav>
+
+	<div class="container-fluid" style="min-height:100%; margin: 10px 10px 5px 10px">
+		<div class="row">
+			<div class="col-sm-2">
+				  <br>
+				  <center>
+					<img src="{% static 'personal/img/sunny.jpg' %}" class="responsive-img" style='max-height:200px;' alt="SW">
+				  </center>
+			  </div>
+			  <div class="col-sm-9">
+				  <br><br><br><br>
+				  <center>
+				  <h2 id="title">Programming, Teaching, Entrepreneurship</h2>
+				  </center>
+			  </div>
+		</div><hr>
+
+		<div class="row">
+		  <div class="col-sm-12">
+		  
+			<div class='container-fluid'>
+			<br><br><br>
+			   {% block content %}
+			   {% endblock %}	
+         <br>
+        <!-- <input type="text" id="randInput" 
+          onChange="var dataEntered=document.getElementById('randInput').value; alert('User Typed ' + dataEntered);">  -->
+          
+			</div>
+		  </div>
+		</div> 
+	</div>
+
+
+	<footer>
+		<div class="container-fluid" style='margin-left:15px'>
+			<p><a href="#" target="blank">Contact</a> | <a href="#" target="blank">LinkedIn</a> | <a href="#" target="blank">Twitter</a> | <a href="#" target="blank">Google+</a></p>
+		</div>
+  </div>
+</div>
+
+	</footer>	
+
+  <script>
+
+  </script>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+{% extends "personal/main.html" %}
+
+{% block content %}
+
+
+<form id="login-form" action="#" method="post">
+		<fieldset>
+
+            <center>
+			<h3>Login</h3><br>
+            {% csrf_token %}{% csrf_token %}
+
+            <label for="login">   Email   </label>
+			<input type="text" id="login" name="login"/>
+			<div class="clear"></div><br>
+
+			<label for="password">Password</label>
+			<input type="password" id="password" name="password"/>
+			<div class="clear"></div>
+
+			<label for="remember_me" style="padding: 10px;">Remember me?</label>
+			<input type="checkbox" id="remember_me" style="position: relative; top: 3px; margin: 0; " name="remember_me"/>
+			<div class="clear"></div>
+
+			<br />
+			<input type="submit" style="margin: -20px 0 0 287px;" class="button" name="commit" value="Log in"/>
+
+                </center>
+		</fieldset>
+	</form>
+
+
+
+{% endblock %} 
